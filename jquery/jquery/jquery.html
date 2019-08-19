@@ -1,0 +1,75 @@
+<html>
+	<head>
+
+			<title>LEARNING JQUERY</title>
+
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+
+
+			<style type="text/css">
+
+				#circle{
+						width: 200px;
+						height:200px;
+						background-color: green;
+						border-radius: 100px;
+
+
+				}
+
+
+				.square{
+
+						width: 200px;
+						height: 200px;
+						background-color: red;
+						margin-top: 10px; 
+
+				}
+
+
+
+
+
+			</style>
+	</head>
+
+	<body>
+
+		<div id="circle"></div>
+
+
+		<p>THis is some text</p>
+
+		
+
+		<iframe src="http://www.cnn.com"></iframe>
+
+		<div class="square"></div>
+
+		<div  class="square"></div>
+
+		<script >
+
+			$("#circle").hover(function(){
+
+			$("iframe").attr("src","http://www.bbc.com"));
+
+
+
+			});
+
+
+
+			$(".square").hover(function(){
+
+				alert("Square Cllicked");
+
+
+			});
+
+		</script>
+
+	</body>
+</html>

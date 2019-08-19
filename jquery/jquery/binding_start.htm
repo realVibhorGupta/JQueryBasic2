@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Binding and Unbinding Events with jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+
+
+                $("#evtTarget").on("mouseover mouseleave " , highlight);
+                $("#evtTarget").on("click" , function(evt){
+
+                    $("#evtTarget").off("mouseover mouseleave" , highlight);
+                    $("#evtTarget").html("<p>tou stp  it</p>");
+                    
+
+
+
+                });
+
+
+        });
+
+        function highlight(evt){
+
+                $("#evtTarget").toggleClass("highlighted");
+            }
+
+
+
+
+        
+    </script>
+    <style type='text/css'>
+    .normal {
+        width:300px;
+        height:300px;
+        background-color:Yellow;
+        font-size:18pt;
+   }
+    
+    .highlighted {
+        background-color:Red;
+    }
+    </style>
+</head>
+<body>
+<h1>Binding Event Example</h1>
+<div id="evtTarget" class="normal">Mouse over this div to see the effect. Click on it to unbind the mouseover.</div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<html>
+	<head>
+
+			<title>LEARNING JQUERY</title>
+
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+
+
+			<style type="text/css">
+
+				#circle{
+						width: 200px;
+						height:200px;
+						background-color: green;
+						border-radius: 100px;
+
+
+				}
+
+
+				.square{
+
+						width: 300px;
+						height: 300px;
+						background-color: red;
+						margin-top: 10px; 
+
+				}
+
+
+			</style>
+	</head>
+
+	<body>
+
+		<div id="circle"></div>
+
+		<table>
+		<tr>
+			<td>
+			<p>THis is some text</p>
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+				<button id="fadeButton">Fade Out Button</button>
+			</td>
+			<td>
+		
+		<button id="appearButton">Fade In Button</button>
+		</td>
+	</tr>
+		</table>
+		<div class="square"></div>
+
+		<div  class="square"></div>
+
+		<script >
+				$("div").click(function(){
+
+					//$(this).css("display","none");
+
+					//$(this).css("width","500px");
+
+					//$(this).hide();
+					//$(this).fadeOut();
+					$(this).blur();
+				}) ;
+			
+				$("#fadeButton").click(function(){
+
+					$("p").fadeOut(1900,function(){
+
+						$("#circle").fadeOut(1900,function(){
+							$(".square").fadeOut(1900);
+						});
+
+
+					});
+
+				});
+
+
+				$("#appearButton").click(function(){
+
+					$("p").fadeIn(1900,function(){
+
+						$("#circle").fadeIn(1900,function(){
+							$(".square").fadeIn(1900);
+						});
+
+
+					});
+				});
+		</script>
+
+	</body>
+</html>
